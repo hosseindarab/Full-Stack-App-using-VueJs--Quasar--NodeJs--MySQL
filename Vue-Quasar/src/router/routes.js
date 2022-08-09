@@ -1,10 +1,12 @@
+import Home from "../layouts/MainLayout.vue"
 
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: Home,
     children: [
-      { path: '', component: () => import('pages/IndexPage.vue') }
+      { path: '', component: () => import('pages/IndexPage.vue') },
+      { path: '/to-do-list', component: () => import('pages/ToDoList.vue') },
     ]
   },
 
